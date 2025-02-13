@@ -3,11 +3,11 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:purchasedb;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:mysql://mysql-db:3306/purchasedb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
